@@ -272,24 +272,24 @@ class ImageReader(object):
         # self.image_list, self.label_list  = read_labeled_image_list(self.data_dir, self.data_list) 
         self.image_list, self.label_list ,self.edge_list = read_labeled_image_list_1(self.data_dir, self.data_list) #list of path(string)
 
-        print('self.image_list___')
-        print(self.image_list)
+#         print('self.image_list___')
+#         print(self.image_list)
 
-        print('self.label_list___')
-        print(self.label_list)
+#         print('self.label_list___')
+#         print(self.label_list)
 
 
         # self.label_list =[]
         # self.edge_list = read_edge_list(self.data_dir, self.data_id_list)
 
-        print('self.edge_list______')
-        print(self.edge_list)
+        # print('self.edge_list______')
+        # print(self.edge_list)
 
         self.images = tf.convert_to_tensor(self.image_list, dtype=tf.string)
         self.labels = tf.convert_to_tensor(self.label_list, dtype=tf.string)
         self.edges = tf.convert_to_tensor(self.edge_list, dtype=tf.string)
         
-        print("self.labels")
+        # print("self.labels")
         # print(self.labels)
         self.queue = tf.compat.v1.train.slice_input_producer([self.images,self.labels,self.edges],shuffle=shuffle)
        

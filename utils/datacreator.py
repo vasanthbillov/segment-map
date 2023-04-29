@@ -1,9 +1,7 @@
 
 from PIL import Image
 import os
-
 from pathlib import PureWindowsPath, PurePosixPath,Path
-
 import pandas as pd
 
 
