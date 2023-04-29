@@ -1,0 +1,8 @@
+checkpoints/
+instance_tool/
+datasets/
+output/
+evaluation/
+logs/
+model/
+*.pyc
